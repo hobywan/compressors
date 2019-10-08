@@ -27,14 +27,14 @@ if (NETCDF_FOUND)
   include_directories (${NETCDF_INCLUDE_DIRS})
 endif ()
 
-find_program(TAGS ctags)
-if(TAGS)
-	add_custom_target(tags ALL
-		COMMAND ${TAGS} -f ${CMAKE_BINARY_DIR}/tags -R
-		COMMENT Generating Tag files
-		WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
-		)
-endif()
+# find_program(TAGS ctags)
+# if(TAGS)
+# 	add_custom_target(tags ALL
+# 		COMMAND ${TAGS} -f ${CMAKE_BINARY_DIR}/tags -R
+# 		COMMENT Generating Tag files
+# 		WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
+# 		)
+# endif()
 
 include_directories (
 	${CMAKE_CURRENT_SOURCE_DIR}/sz/include
