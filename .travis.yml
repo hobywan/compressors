@@ -6,11 +6,6 @@ os:
 language: cpp
 compiler: gcc
 
-matrix:
-  exclude:
-    - compiler: gcc
-      os: osx
-
 addons:
   apt:
     sources:
@@ -22,6 +17,7 @@ addons:
     - zlib1g-dev
     - libgsl-dev
     - libfftw3-dev
+    - libnetcdf-dev
 
   homebrew:
     packages:
@@ -31,6 +27,7 @@ addons:
     - openssl
     - gsl
     - fftw
+    - netcdf
 
 before_script:
   - export CC=gcc-9 CXX=g++-9
