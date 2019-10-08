@@ -1,0 +1,41 @@
+dist: xenial
+os:
+  - linux
+  - osx
+
+language: cpp
+compiler: gcc
+
+matrix:
+  exclude:
+    - compiler: gcc
+      os: osx
+
+addons:
+  apt:
+    sources:
+    - ubuntu-toolchain-r-test
+    packages:
+    - cmake
+    - g++-9
+    - zlib1g
+    - openssl
+    - libgsl-dev
+    - libfftw3-dev
+
+  homebrew:
+    packages:
+    - cmake
+    - g++-9
+    - zlib
+    - openssl
+    - gsl
+    - fftw
+
+script:
+  - cd isabela
+  - mkdir build
+  - cd build
+  - cmake ..
+  - make -j
+  - make install
