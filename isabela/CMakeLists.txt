@@ -15,6 +15,9 @@ endif ()
 
 add_library(isabela STATIC)
 
+# manage dependencies
+list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
+
 set(OPENSSL_ROOT_DIR "/usr/local/opt/openssl")
 find_package(zlib REQUIRED)
 find_package(OpenSSL REQUIRED)
