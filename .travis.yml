@@ -34,12 +34,11 @@ addons:
 
 before_script:
   - export CC=gcc-9 CXX=g++-9
-  - which ${CXX}
 
 script:
   - cd isabela
   - mkdir build
   - cd build
-  - cmake ..
+  - cmake -DCMAKE_INSTALL_PREFIX=../install ..
   - make -j
   - make install
