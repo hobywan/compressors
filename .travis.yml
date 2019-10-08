@@ -1,11 +1,8 @@
 dist: xenial
-os:
-  - linux
-  - osx
 
+os: linux
 language: cpp
 compiler: gcc
-osx_image: xcode10
 
 addons:
   apt:
@@ -19,16 +16,6 @@ addons:
     - libgsl-dev
     - libfftw3-dev
     - libnetcdf-dev
-
-  homebrew:
-    packages:
-    - cmake
-    - gcc@9
-    - zlib
-    - openssl
-    - gsl
-    - fftw
-    - netcdf
 
 before_script:
   - export CC=gcc-9 CXX=g++-9
