@@ -32,6 +32,10 @@ addons:
     - gsl
     - fftw
 
+before_script:
+  - export CC=gcc-9 CXX=g++-9
+  - which ${CXX}
+
 script:
   - cd isabela
   - mkdir build
