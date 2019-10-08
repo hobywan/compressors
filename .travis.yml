@@ -22,7 +22,7 @@ addons:
   homebrew:
     packages:
     - cmake
-    - g++-9
+    - gcc@9
     - zlib
     - openssl
     - gsl
