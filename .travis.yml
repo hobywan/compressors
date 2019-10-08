@@ -36,9 +36,10 @@ before_script:
   - export CC=gcc-9 CXX=g++-9
 
 script:
-  - cd isabela
-  - mkdir build
-  - cd build
-  - cmake -DCMAKE_INSTALL_PREFIX=../install ..
-  - make -j
-  - make install
+  - |
+    compressors=("blosc" "fpzip" "isabela" "sz" "zfp");
+    for current in "${compressors[@]}"; do
+      cd ${current} && mkdir build && cd build;
+      cmake -DCMAKE_INSTALL_PREFIX=../install ..;
+      make -j && make install && cd ../..;
+    done
