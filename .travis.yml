@@ -18,8 +18,8 @@ addons:
     packages:
     - cmake
     - g++-9
-    - zlib1g
     - openssl
+    - zlib1g-dev
     - libgsl-dev
     - libfftw3-dev
 
