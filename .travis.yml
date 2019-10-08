@@ -5,6 +5,7 @@ os:
 
 language: cpp
 compiler: gcc
+osx_image: xcode11
 
 addons:
   apt:
